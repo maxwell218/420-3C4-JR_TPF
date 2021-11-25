@@ -63,6 +63,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Classes\FriendRequest.cs" />
+    <Compile Include="Classes\User.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -93,6 +95,35 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets\Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Icons\addgroup_user_empty.png" />
+    <Resource Include="Assets\Icons\addgroup_user_full.png" />
+    <Resource Include="Assets\Icons\add_friend_empty.png" />
+    <Resource Include="Assets\Icons\add_friend_full.png" />
+    <Resource Include="Assets\Icons\find_friend_empty.png" />
+    <Resource Include="Assets\Icons\find_friend_full.png" />
+    <Resource Include="Assets\Icons\home_empty.png" />
+    <Resource Include="Assets\Icons\home_full.png" />
+    <Resource Include="Assets\Icons\like_empty.png" />
+    <Resource Include="Assets\Icons\like_full.png" />
+    <Resource Include="Assets\Icons\logo.png" />
+    <Resource Include="Assets\Icons\user_empty.png" />
+    <Resource Include="Assets\Icons\user_full.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Icons\group_empty.png" />
+    <Resource Include="Assets\Icons\group_full.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Icons\marketplace_empty.png" />
+    <Resource Include="Assets\Icons\marketplace_full.png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Icons\notification_full.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

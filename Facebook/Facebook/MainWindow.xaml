@@ -5,8 +5,82 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Facebook"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="600" MinHeight="450" Width="1100" MinWidth="900">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="65"/>
+            <RowDefinition Height="3"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.IsSharedSizeScope="True" Grid.Row="0" VerticalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" SharedSizeGroup="LeftAndRight"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto" SharedSizeGroup="LeftAndRight"/>
+            </Grid.ColumnDefinitions>
+            <WrapPanel Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <Button Style="{DynamicResource NavBarLogoButtonStyle}" Padding="0" x:Name="LogoButton" Height="60" Width="60" Margin="15, 0">
+                    <Image Source="/Assets/Icons/logo.png" RenderOptions.BitmapScalingMode="HighQuality"/>
+                </Button>
+            </WrapPanel>
+            <WrapPanel Grid.Column="1" HorizontalAlignment="Center">
+                <ToggleButton ToolTip="Accueil" x:Name="HomeToggleButton" Style="{DynamicResource NavBarToggleButtonStyle}" Padding="0" Height="65" Width="120" IsChecked="True">
+                    <Rectangle Width="30" Height="30" RenderOptions.BitmapScalingMode="HighQuality">
+                        <Rectangle.Fill>
+                            <SolidColorBrush>#039BE5</SolidColorBrush>
+                        </Rectangle.Fill>
+                        <Rectangle.OpacityMask>
+                            <ImageBrush ImageSource="/Assets/Icons/home_full.png"/>
+                        </Rectangle.OpacityMask>
+                    </Rectangle>
+                </ToggleButton>
+                <ToggleButton ToolTip="Marketplace" x:Name="MarketplaceToggleButton" Style="{DynamicResource NavBarToggleButtonStyle}" Padding="0" Height="65" Width="120">
+                    <Rectangle Width="30" Height="30" RenderOptions.BitmapScalingMode="HighQuality">
+                        <Rectangle.Fill>
+                            <SolidColorBrush>#646464</SolidColorBrush>
+                        </Rectangle.Fill>
+                        <Rectangle.OpacityMask>
+                            <ImageBrush ImageSource="/Assets/Icons/marketplace_empty.png" />
+                        </Rectangle.OpacityMask>
+                    </Rectangle>
+                </ToggleButton>
+                <ToggleButton ToolTip="Groupes" x:Name="GroupToggleButton" Style="{DynamicResource NavBarToggleButtonStyle}" Padding="0" Height="65" Width="120">
+                    <Rectangle Width="30" Height="30" RenderOptions.BitmapScalingMode="HighQuality">
+                        <Rectangle.Fill>
+                            <SolidColorBrush>#646464</SolidColorBrush>
+                        </Rectangle.Fill>
+                        <Rectangle.OpacityMask>
+                            <ImageBrush ImageSource="/Assets/Icons/group_empty.png" />
+                        </Rectangle.OpacityMask>
+                    </Rectangle>
+                </ToggleButton>
+            </WrapPanel>
+            <WrapPanel Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0, 0, 15, 0">
+                <ToggleButton Style="{DynamicResource SideBarNameToggleButtonStyle}" Padding="0" Height="40">
+                    <Grid Height="40">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.Column="0" Source="/Assets/Icons/logo.png" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="5, 0, 10, 0" FontSize="14">Ceci est un test</TextBlock>
+                    </Grid>
+                </ToggleButton>
+                <ToggleButton Style="{DynamicResource SideBarToggleButtonStyle}" Padding="0" Height="40" Width="40" Margin="5, 0, 0, 0">
+                    <Image Source="/Assets/Icons/notification_full.png" Width="20" RenderOptions.BitmapScalingMode="HighQuality"/>
+                </ToggleButton>
+            </WrapPanel>
+        </Grid>
+        <Border Grid.Row="1" Opacity="0.5">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0.504,1.5" StartPoint="0.504,0.03">
+                    <GradientStop Color="#646464" Offset="0"/>
+                    <GradientStop Color="#FFFFFFFF" Offset="0.567"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+        <StackPanel Grid.Row="2">
+
+        </StackPanel>
     </Grid>
 </Window>
