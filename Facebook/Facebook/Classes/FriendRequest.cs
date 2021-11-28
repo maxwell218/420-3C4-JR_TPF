@@ -4,17 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Facebook.Classes
+namespace Facebook
 {
-	class FriendRequest
+	public class FriendRequest
 	{
-		private User _sender;
-		private User _receiver;
+		public User Sender;
+		public User Receiver;
 
 		public FriendRequest(User sender, User receiver)
 		{
-			_sender = sender;
-			_receiver = receiver;
+			Sender = sender;
+			Receiver = receiver;
 		}
 	}
 }

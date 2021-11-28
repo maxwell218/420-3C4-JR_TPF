@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Facebook"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" MinHeight="450" Width="1100" MinWidth="900">
+        Title="Facebook" Height="600" MinHeight="450" Width="1100" MinWidth="900" FontSize="14">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="65"/>
@@ -79,8 +79,13 @@
                 </LinearGradientBrush>
             </Border.Background>
         </Border>
-        <StackPanel Grid.Row="2">
-
-        </StackPanel>
+        <Grid HorizontalAlignment="Stretch" Grid.Row="2" Background="#E4EBEC" VerticalAlignment="Stretch">
+            <Border Background="White" BorderBrush="#E4EBEC" BorderThickness="1" CornerRadius="15" Margin="100, 35">
+                <StackPanel Background="Transparent">
+                    <TextBlock Height="23" HorizontalAlignment="Left" Margin="62,12,0,0" Name="textBlock_From" Text="test" VerticalAlignment="Top" Width="283" />
+                    <TextBlock Height="23" HorizontalAlignment="Left" Margin="62,38,0,0" Name="textBlock_Subject" Text="" VerticalAlignment="Top" Width="283"/>
+                </StackPanel>
+            </Border>
+        </Grid>
     </Grid>
 </Window>
