@@ -24,5 +24,12 @@ namespace Facebook
 		{
 			InitializeComponent();
 		}
+
+		private void CreateUserButtonClick(object sender, RoutedEventArgs e)
+		{
+			CreateUserWindow cw = new CreateUserWindow();
+			cw.Show();
+			this.Close();
+		}
 	}
 }

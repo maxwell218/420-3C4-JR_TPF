@@ -48,7 +48,7 @@
                             <Hyperlink>Mot de passe oublié ?</Hyperlink>
                         </TextBlock>
                         <Rectangle Grid.Row="6" Fill="LightGray" Height="1"/>
-                        <Button Grid.Row="7" Margin="0, 15, 0, 5" Style="{DynamicResource CreateAccountButtonStyle}">
+                        <Button Grid.Row="7" Margin="0, 15, 0, 5" Style="{DynamicResource CreateAccountButtonStyle}" Click="CreateUserButtonClick">
                             <TextBlock>Créer un nouveau compte</TextBlock>
                         </Button>
                     </Grid>
