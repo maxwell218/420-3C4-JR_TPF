@@ -16,3 +16,5 @@ D:\Informatique\Session 3\Programmation d'interfaces graphiques\TPF\Facebook\Fac
 D:\Informatique\Session 3\Programmation d'interfaces graphiques\TPF\Facebook\Facebook\obj\Debug\App.baml
 D:\Informatique\Session 3\Programmation d'interfaces graphiques\TPF\Facebook\Facebook\obj\Debug\Windows\LoginWindow.g.cs
 D:\Informatique\Session 3\Programmation d'interfaces graphiques\TPF\Facebook\Facebook\obj\Debug\Windows\LoginWindow.baml
+D:\Informatique\Session 3\Programmation d'interfaces graphiques\TPF\Facebook\Facebook\obj\Debug\Windows\CreateUserWindow.g.cs
+D:\Informatique\Session 3\Programmation d'interfaces graphiques\TPF\Facebook\Facebook\obj\Debug\Windows\CreateUserWindow.baml

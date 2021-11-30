@@ -1,11 +1,11 @@
-﻿<Window x:Class="Facebook.LoginWindow"
+﻿<Window x:Class="Facebook.CreateUserWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Facebook"
         mc:Ignorable="d"
-        Title="Facebook - Se connecter ou s'inscrire" Height="500" Width="600" ResizeMode="NoResize" FontSize="14">
+        Title="Facebook - Inscription" Height="500" Width="600" ResizeMode="NoResize" FontSize="14">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="65"/>
@@ -34,22 +34,27 @@
                             <RowDefinition Height="auto"/>
                             <RowDefinition Height="auto"/>
                             <RowDefinition Height="auto"/>
-                            <RowDefinition Height="1"/>
-                            <RowDefinition Height="auto"/>
                         </Grid.RowDefinitions>
-                        <TextBlock Grid.Row="0" Margin="0, 0, 0, 5" Foreground="Gray">Courriel :</TextBlock>
-                        <TextBox Grid.Row="1" Style="{DynamicResource LoginTextBoxStyle}"/>
-                        <TextBlock Grid.Row="2" Margin="0, 10, 0, 5" Foreground="Gray">Mot de passe :</TextBlock>
-                        <PasswordBox Grid.Row="3" Style="{DynamicResource LoginPasswordBoxStyle}"/>
-                        <Button Grid.Row="4" Margin="0, 15, 0, 15" Style="{DynamicResource LoginButtonStyle}">
-                            <TextBlock>Se connecter</TextBlock>
-                        </Button>
-                        <TextBlock Grid.Row="5" Margin="0, 0, 0, 15" HorizontalAlignment="Center" Style="{DynamicResource LoginHyperlinkStyle}">
-                            <Hyperlink>Mot de passe oublié ?</Hyperlink>
-                        </TextBlock>
-                        <Rectangle Grid.Row="6" Fill="LightGray" Height="1"/>
-                        <Button Grid.Row="7" Margin="0, 15, 0, 5" Style="{DynamicResource CreateAccountButtonStyle}">
-                            <TextBlock>Créer un nouveau compte</TextBlock>
+                        <Grid Grid.Row="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column="0" Margin="0, 0, 5, 0">
+                                <TextBlock Margin="0, 0, 0, 5" Foreground="Gray">Prénom :</TextBlock>
+                                <TextBox Style="{DynamicResource LoginTextBoxStyle}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="1" Margin="5, 0, 0, 0">
+                                <TextBlock Margin="0, 0, 0, 5" Foreground="Gray">Nom :</TextBlock>
+                                <TextBox Style="{DynamicResource LoginTextBoxStyle}"/>
+                            </StackPanel>
+                        </Grid>
+                        <TextBlock Grid.Row="1" Margin="0, 10, 0, 5" Foreground="Gray">Courriel :</TextBlock>
+                        <TextBox Grid.Row="2" Style="{DynamicResource LoginTextBoxStyle}"/>
+                        <TextBlock Grid.Row="3" Margin="0, 10, 0, 5" Foreground="Gray">Mot de passe :</TextBlock>
+                        <PasswordBox Grid.Row="4" Style="{DynamicResource LoginPasswordBoxStyle}"/>
+                        <Button Grid.Row="5" Margin="0, 15, 0, 5" Style="{DynamicResource CreateAccountButtonStyle}">
+                            <TextBlock>S'inscrire</TextBlock>
                         </Button>
                     </Grid>
                 </Border>

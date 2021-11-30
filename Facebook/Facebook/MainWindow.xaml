@@ -67,7 +67,24 @@
                     </Grid>
                 </ToggleButton>
                 <ToggleButton Style="{DynamicResource SideBarToggleButtonStyle}" Padding="0" Height="40" Width="40" Margin="5, 0, 0, 0">
-                    <Image Source="/Assets/Icons/notification_full.png" Width="20" RenderOptions.BitmapScalingMode="HighQuality"/>
+                    <Rectangle Width="20" Height="20" RenderOptions.BitmapScalingMode="HighQuality">
+                        <Rectangle.Fill>
+                            <SolidColorBrush>Black</SolidColorBrush>
+                        </Rectangle.Fill>
+                        <Rectangle.OpacityMask>
+                            <ImageBrush ImageSource="/Assets/Icons/notification_full.png" />
+                        </Rectangle.OpacityMask>
+                    </Rectangle>
+                </ToggleButton>
+                <ToggleButton Style="{DynamicResource SideBarToggleButtonStyle}" Padding="0" Height="40" Width="40" Margin="5, 0, 0, 0">
+                    <Rectangle Width="20" Height="20" RenderOptions.BitmapScalingMode="HighQuality">
+                        <Rectangle.Fill>
+                            <SolidColorBrush>Black</SolidColorBrush>
+                        </Rectangle.Fill>
+                        <Rectangle.OpacityMask>
+                            <ImageBrush ImageSource="/Assets/Icons/options_full.png" />
+                        </Rectangle.OpacityMask>
+                    </Rectangle>
                 </ToggleButton>
             </WrapPanel>
         </Grid>
