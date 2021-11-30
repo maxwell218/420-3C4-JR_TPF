@@ -38,10 +38,10 @@
                             <RowDefinition Height="auto"/>
                         </Grid.RowDefinitions>
                         <TextBlock Grid.Row="0" Margin="0, 0, 0, 5" Foreground="Gray">Courriel :</TextBlock>
-                        <TextBox Grid.Row="1" Style="{DynamicResource LoginTextBoxStyle}"/>
+                        <TextBox Grid.Row="1" x:Name="EmailTextBox" Style="{DynamicResource LoginTextBoxStyle}"/>
                         <TextBlock Grid.Row="2" Margin="0, 10, 0, 5" Foreground="Gray">Mot de passe :</TextBlock>
-                        <PasswordBox Grid.Row="3" Style="{DynamicResource LoginPasswordBoxStyle}"/>
-                        <Button Grid.Row="4" Margin="0, 15, 0, 15" Style="{DynamicResource LoginButtonStyle}">
+                        <PasswordBox Grid.Row="3" x:Name="PasswordBox" Style="{DynamicResource LoginPasswordBoxStyle}"/>
+                        <Button Grid.Row="4" Margin="0, 15, 0, 15" Style="{DynamicResource LoginButtonStyle}" Click="LoginButtonClick">
                             <TextBlock>Se connecter</TextBlock>
                         </Button>
                         <TextBlock Grid.Row="5" Margin="0, 0, 0, 15" HorizontalAlignment="Center" Style="{DynamicResource LoginHyperlinkStyle}">

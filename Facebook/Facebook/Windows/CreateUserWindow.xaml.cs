@@ -17,7 +17,7 @@ using System.Windows.Shapes;
 namespace Facebook
 {
 	/// <summary>
-	/// Interaction logic for LoginWindow.xaml
+	/// Interaction logic for CreateUserWindow.xaml
 	/// </summary>
 	public partial class CreateUserWindow : Window
 	{
@@ -77,6 +77,7 @@ namespace Facebook
 			// Check if password has enough chars
 			if (password.Length == 0 && isValidUserForm)
 			{
+				isValidUserForm = false;
 				MessageBox.Show("Veuillez taper votre mot de passe.", "Erreur", MessageBoxButton.OK, MessageBoxImage.Error);
 				PasswordBox.Focus();
 			}
