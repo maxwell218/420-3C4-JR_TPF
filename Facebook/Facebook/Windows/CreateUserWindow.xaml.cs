@@ -95,6 +95,10 @@ namespace Facebook
 		{
 			LoginWindow lw = new LoginWindow();
 			lw.Show();
+			if (!lw.IsVisible)
+			{
+				MessageBox.Show("Impossible d'ouvrir la page de connexion.", "Erreur", MessageBoxButton.OK, MessageBoxImage.Error);
+			}
 		}
 
 		// Source : https://stackoverflow.com/questions/1365407/c-sharp-code-to-validate-email-address

@@ -2,11 +2,9 @@ D:\Informatique\Session 3\Programmation d'interfaces graphiques\TPF\Facebook\Fac
 D:\Informatique\Session 3\Programmation d'interfaces graphiques\TPF\Facebook\Facebook\bin\Debug\Facebook.exe
 D:\Informatique\Session 3\Programmation d'interfaces graphiques\TPF\Facebook\Facebook\bin\Debug\Facebook.pdb
 D:\Informatique\Session 3\Programmation d'interfaces graphiques\TPF\Facebook\Facebook\obj\Debug\Facebook.csprojAssemblyReference.cache
-D:\Informatique\Session 3\Programmation d'interfaces graphiques\TPF\Facebook\Facebook\obj\Debug\MainWindow.g.cs
 D:\Informatique\Session 3\Programmation d'interfaces graphiques\TPF\Facebook\Facebook\obj\Debug\App.g.cs
 D:\Informatique\Session 3\Programmation d'interfaces graphiques\TPF\Facebook\Facebook\obj\Debug\Facebook_MarkupCompile.cache
 D:\Informatique\Session 3\Programmation d'interfaces graphiques\TPF\Facebook\Facebook\obj\Debug\Facebook_MarkupCompile.lref
-D:\Informatique\Session 3\Programmation d'interfaces graphiques\TPF\Facebook\Facebook\obj\Debug\MainWindow.baml
 D:\Informatique\Session 3\Programmation d'interfaces graphiques\TPF\Facebook\Facebook\obj\Debug\Facebook.g.resources
 D:\Informatique\Session 3\Programmation d'interfaces graphiques\TPF\Facebook\Facebook\obj\Debug\Facebook.Properties.Resources.resources
 D:\Informatique\Session 3\Programmation d'interfaces graphiques\TPF\Facebook\Facebook\obj\Debug\Facebook.csproj.GenerateResource.cache
@@ -18,3 +16,5 @@ D:\Informatique\Session 3\Programmation d'interfaces graphiques\TPF\Facebook\Fac
 D:\Informatique\Session 3\Programmation d'interfaces graphiques\TPF\Facebook\Facebook\obj\Debug\Windows\LoginWindow.baml
 D:\Informatique\Session 3\Programmation d'interfaces graphiques\TPF\Facebook\Facebook\obj\Debug\Windows\CreateUserWindow.g.cs
 D:\Informatique\Session 3\Programmation d'interfaces graphiques\TPF\Facebook\Facebook\obj\Debug\Windows\CreateUserWindow.baml
+D:\Informatique\Session 3\Programmation d'interfaces graphiques\TPF\Facebook\Facebook\obj\Debug\Windows\MainWindow.g.cs
+D:\Informatique\Session 3\Programmation d'interfaces graphiques\TPF\Facebook\Facebook\obj\Debug\Windows\MainWindow.baml

@@ -30,6 +30,7 @@ namespace Facebook
 			bool isValidLogin = false;
 			string email = EmailTextBox.Text.Trim();
 			string password = PasswordBox.Password;
+			User currentUser = new User();
 
 			// Check if fields are empty
 			if (email.Length == 0 || password.Length == 0)
@@ -55,6 +56,7 @@ namespace Facebook
 					}
 					else
 					{
+						currentUser = user;
 						isValidLogin = true;
 					}
 				}
@@ -63,8 +65,18 @@ namespace Facebook
 			if (isValidLogin)
 			{
 				// Todo - MainWindow implementation
+				MainWindow mw = new MainWindow(currentUser);
+				mw.Show();
+				if (mw.IsVisible)
+				{
+					this.Close();
+				}
+				else
+				{
+					MessageBox.Show("Impossible d'ouvrir la page principale.", "Erreur", MessageBoxButton.OK, MessageBoxImage.Error);
+				}
 			}
-			// Email doesn't exist users list
+			// Email doesn't exist in users list
 			else
 			{
 				MessageBox.Show("L'adresse courriel fournie n'est pas associée à un compte existant.", "Erreur", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -76,7 +88,14 @@ namespace Facebook
 		{
 			CreateUserWindow cw = new CreateUserWindow();
 			cw.Show();
-			this.Close();
+			if (cw.IsVisible)
+			{
+				this.Close();
+			}
+			else
+			{
+				MessageBox.Show("Impossible d'ouvrir la page d'inscription.", "Erreur", MessageBoxButton.OK, MessageBoxImage.Error);
+			}
 		}
 	}
 }
