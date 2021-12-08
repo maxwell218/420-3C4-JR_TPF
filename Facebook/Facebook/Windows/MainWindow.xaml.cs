@@ -25,7 +25,36 @@ namespace Facebook
 		{
 			InitializeComponent();
 			currentUser = user;
-			UserNameTextBlock.Text = currentUser.FirstName + " " + currentUser.LastName;
+
+			UserNameTextBlock.Text = currentUser.ToString();
+
+			ImageBrush userProfileImage = new ImageBrush(new BitmapImage(user.ProfileImage));
+			UserProfileImage.Background = userProfileImage;
+
+			// Initialize friend list if we have friends :(
+			if (currentUser.Friends.Count > 0)
+			{
+				FriendsList.Items.Clear();
+				currentUser.Friends.Sort();
+				foreach (User friend in currentUser.Friends)
+				{
+					TextBlock name = new TextBlock();
+					name.Text = friend.ToString();
+
+					Border border = new Border();
+					ImageBrush image = new ImageBrush(new BitmapImage(friend.ProfileImage));
+					border.Background = image;
+
+					WrapPanel wp = new WrapPanel();
+					wp.Children.Add(border);
+					wp.Children.Add(name);
+
+					ListViewItem li = new ListViewItem();
+					li.Content = wp;
+					FriendsList.Items.Add(li);
+				}
+			}
+
 		}
 	}
 }

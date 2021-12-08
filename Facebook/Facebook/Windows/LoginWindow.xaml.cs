@@ -64,7 +64,6 @@ namespace Facebook
 
 			if (isValidLogin)
 			{
-				// Todo - MainWindow implementation
 				MainWindow mw = new MainWindow(currentUser);
 				mw.Show();
 				if (mw.IsVisible)

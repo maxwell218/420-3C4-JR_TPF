@@ -8,7 +8,7 @@
         <!-- Background color: #F0F2F5 -->
         <!-- Facebook color: #039BE5 -->
 
-        <!-- Login & Logo -->
+        <!-- Login & logo -->
         <Style x:Key="LoginTextBlockLogoStyle" TargetType="{x:Type TextBlock}">
             <Setter Property="FontSize" Value="24"/>
             <Setter Property="FontFamily" Value="Tahoma"/>
@@ -124,7 +124,7 @@
                 </EventTrigger>
             </Style.Triggers>
         </Style>
-        <!-- Nav Bar Left And Main Side -->
+        <!-- Navbar left and main side -->
         <Style x:Key="ToolTipStyle" TargetType="{x:Type ToolTip}">
             <Setter Property="Background">
                 <Setter.Value>
@@ -221,7 +221,7 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        <!-- Nav Bar Right Side -->
+        <!-- Navbar right side -->
         <Style x:Key="SideBarNameToggleButtonStyle" BasedOn="{StaticResource NavBarButtonStyle_Default}" TargetType="{x:Type ToggleButton}">
             <Setter Property="Cursor" Value="Hand"/>
             <Setter Property="SnapsToDevicePixels" Value="True" />
@@ -279,7 +279,8 @@
             <Setter Property="HorizontalContentAlignment" Value="Center"/>
             <Style.Resources>
                 <Style TargetType="{x:Type ListViewItem}">
-                    <Setter Property="Background" Value="Transparent" />
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="MaxWidth" Value="900"/>
                     <Setter Property="Template">
                         <Setter.Value>
                             <ControlTemplate TargetType="{x:Type ListViewItem}">
@@ -289,6 +290,88 @@
                             </ControlTemplate>
                         </Setter.Value>
                     </Setter>
+                </Style>
+            </Style.Resources>
+        </Style>
+        <!-- Friends listview -->
+        <Style x:Key="FriendListStyle" TargetType="{x:Type ListView}">
+            <Style.Resources>
+                <Style TargetType="{x:Type ListViewItem}">
+                    <Setter Property="Cursor" Value="Hand"/>
+                    <Setter Property="Padding" Value="0"/>
+                    <Setter Property="BorderThickness" Value="0"/>
+                    <Setter Property="Margin" Value="0, 3"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type ListViewItem}">
+                                <Border x:Name="border" CornerRadius="20" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                                    <ContentPresenter Margin="{TemplateBinding Padding}" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <MultiTrigger>
+                                        <MultiTrigger.Conditions>
+                                            <Condition Property="IsMouseOver" Value="True"/>
+                                        </MultiTrigger.Conditions>
+                                        <MultiTrigger.EnterActions>
+                                            <BeginStoryboard>
+                                                <Storyboard>
+                                                    <ColorAnimation To="#DCDCDC" Storyboard.TargetName="border" Storyboard.TargetProperty="Background.Color" Duration="0:0:0.3"/>
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </MultiTrigger.EnterActions>
+                                        <MultiTrigger.ExitActions>
+                                            <BeginStoryboard>
+                                                <Storyboard>
+                                                    <ColorAnimation To="Transparent" Storyboard.TargetName="border" Storyboard.TargetProperty="Background.Color" Duration="0:0:0.3"/>
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </MultiTrigger.ExitActions>
+                                        <Setter Property="Background" TargetName="border" Value="Transparent"/>
+                                        <Setter Property="BorderBrush" TargetName="border" Value="Transparent"/>
+                                    </MultiTrigger>
+                                    <MultiTrigger>
+                                        <MultiTrigger.Conditions>
+                                            <Condition Property="Selector.IsSelectionActive" Value="False"/>
+                                            <Condition Property="IsSelected" Value="True"/>
+                                        </MultiTrigger.Conditions>
+                                        <Setter Property="Background" TargetName="border" Value="#3DDADADA"/>
+                                        <Setter Property="BorderBrush" TargetName="border" Value="#FFDADADA"/>
+                                    </MultiTrigger>
+                                    <MultiTrigger>
+                                        <MultiTrigger.Conditions>
+                                            <Condition Property="Selector.IsSelectionActive" Value="True"/>
+                                            <Condition Property="IsSelected" Value="True"/>
+                                        </MultiTrigger.Conditions>
+                                        <Setter Property="Background" TargetName="border" Value="#3D26A0DA"/>
+                                        <Setter Property="BorderBrush" TargetName="border" Value="#FF26A0DA"/>
+                                    </MultiTrigger>
+                                    <Trigger Property="IsEnabled" Value="False">
+                                        <Setter Property="TextElement.Foreground" TargetName="border" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Resources>
+                        <Style TargetType="{x:Type WrapPanel}">
+                            <Style.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="Width" Value="40"/>
+                                    <Setter Property="Height" Value="40"/>
+                                    <Setter Property="CornerRadius" Value="25"/>
+                                    <Setter Property="Margin" Value="0, 0, 5, 0"/>
+                                    <Setter Property="Background">
+                                        <Setter.Value>
+                                            <ImageBrush Stretch="Fill" RenderOptions.BitmapScalingMode="HighQuality"/>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                                <Style TargetType="{x:Type TextBlock}">
+                                    <Setter Property="VerticalAlignment" Value="Center"/>
+                                </Style>
+                            </Style.Resources>
+                        </Style>
+                    </Style.Resources>
                 </Style>
             </Style.Resources>
         </Style>

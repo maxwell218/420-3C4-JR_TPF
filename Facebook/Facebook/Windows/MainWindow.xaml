@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Facebook"
         mc:Ignorable="d"
-        Title="Facebook" Height="600" MinHeight="450" Width="1100" MinWidth="900" FontSize="14">
+        Title="Facebook" Height="600" MinHeight="450" Width="1100" MinWidth="950" FontSize="14">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="65"/>
@@ -56,14 +56,20 @@
                 </ToggleButton>
             </WrapPanel>
             <WrapPanel Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0, 0, 15, 0">
-                <ToggleButton Style="{DynamicResource SideBarNameToggleButtonStyle}" Padding="0" Height="40">
-                    <Grid Height="40">
+                <ToggleButton Style="{DynamicResource SideBarNameToggleButtonStyle}">
+                    <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="auto"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <Image Grid.Column="0" Source="/Assets/Icons/logo.png" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                        <TextBlock x:Name="UserNameTextBlock" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="5, 0, 10, 0" FontSize="14">NoName</TextBlock>
+                        <Border x:Name="UserProfileImage" Width="40" Height="40" CornerRadius="25" BorderBrush="Transparent" BorderThickness="0">
+                            <Border.Background>
+                                <ImageBrush ImageSource="/Assets/Users/default.jpg"/>
+                            </Border.Background>
+                        </Border>
+                        <TextBlock x:Name="UserNameTextBlock" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="5, 0, 10, 0" FontSize="14">
+                            Nom
+                        </TextBlock>
                     </Grid>
                 </ToggleButton>
                 <ToggleButton Style="{DynamicResource SideBarToggleButtonStyle}" Padding="0" Height="40" Width="40" Margin="5, 0, 0, 0">
@@ -92,7 +98,7 @@
             <Border.Background>
                 <LinearGradientBrush EndPoint="0.504,1.5" StartPoint="0.504,0.03">
                     <GradientStop Color="#646464" Offset="0"/>
-                    <GradientStop Color="#FFFFFFFF" Offset="0.567"/>
+                    <GradientStop Color="#E4EBEC" Offset="0.567"/>
                 </LinearGradientBrush>
             </Border.Background>
         </Border>
@@ -102,25 +108,60 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="auto" SharedSizeGroup="LeftAndRight"/>
             </Grid.ColumnDefinitions>
-            <StackPanel Grid.Column="0" Margin="15, 15, 15, 0">
-                <TextBlock>Trier les publications</TextBlock>
+            <StackPanel Grid.Column="0" Margin="15, 15, 15, 0" VerticalAlignment="Top">
+                <Border Background="White" BorderBrush="#E4EBEC" BorderThickness="1" CornerRadius="10">
+                    <StackPanel Margin="15">
+                        <TextBlock Padding="0, 0, 0, 5">Voir les publications de</TextBlock>
+                        <ComboBox x:Name="PostFilter" Padding="5, 3" FontSize="12">
+                            <ComboBoxItem IsSelected="True">Tout le monde</ComboBoxItem>
+                            <ComboBoxItem>Mes amis</ComboBoxItem>
+                        </ComboBox>
+                        <TextBlock Padding="0, 15, 0, 5">Trier les publications</TextBlock>
+                        <RadioButton x:Name="OrderPostByDate" Padding="0" FontSize="12" GroupName="OrderPost" IsChecked="True" Content="Date" VerticalContentAlignment="Center"/>
+                        <RadioButton x:Name="OrderPostByPopularity" Padding="0" FontSize="12" GroupName="OrderPost" Content="Popularité" VerticalContentAlignment="Center"/>
+                    </StackPanel>
+                </Border>
             </StackPanel>
             <ListView Style="{DynamicResource PostsStyle}" Grid.Column="1" Margin="0, 0, 0, 0">
                 <ListViewItem>
-                    <StackPanel>
-                        <TextBlock Height="23" HorizontalAlignment="Left" Text="Elliot Hart" VerticalAlignment="Top"/>
-                        <TextBlock Height="23" HorizontalAlignment="Left" Text="7d" VerticalAlignment="Top"/>
-                    </StackPanel>
-                </ListViewItem>
-                <ListViewItem>
-                    <StackPanel>
-                        <TextBlock Height="23" HorizontalAlignment="Left" Text="Tom Richards" VerticalAlignment="Top"/>
-                        <TextBlock Height="23" HorizontalAlignment="Left" Text="10d" VerticalAlignment="Top"/>
-                    </StackPanel>
+                    <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Border Width="40" Height="40" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" CornerRadius="25" Margin="0, 0, 5, 0">
+                            <Border.Background>
+                                <ImageBrush Stretch="Fill" ImageSource="/Assets/Users/user1.jpg" RenderOptions.BitmapScalingMode="HighQuality"/>
+                            </Border.Background>
+                        </Border>
+                        <TextBlock Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" Text="Elliot Hart" VerticalAlignment="Top"/>
+                        <TextBlock Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Text="7j" VerticalAlignment="Top" FontSize="12" Foreground="DarkGray"/>
+                    </Grid>
                 </ListViewItem>
             </ListView>
-            <StackPanel Grid.Column="2" Margin="15, 15, 15, 0">
-                <TextBlock>Liste d'amis</TextBlock>
+            <StackPanel Grid.Column="2" Margin="15" VerticalAlignment="Top">
+                <Border Background="White" BorderBrush="#E4EBEC" BorderThickness="1" CornerRadius="10">
+                    <Grid Margin="15" MaxHeight="300">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="0" Padding="0, 0, 0, 5">Liste d'amis</TextBlock>
+                        <ListView Style="{DynamicResource FriendListStyle}" BorderBrush="Transparent" BorderThickness="0" x:Name="FriendsList" Grid.Row="1" FontSize="12" ScrollViewer.CanContentScroll="False" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+                            <ListViewItem Padding="0" BorderThickness="0">
+                                <WrapPanel>
+                                    <TextBlock>
+                                        Ajouter des amis pour<LineBreak/> les afficher ici...
+                                    </TextBlock>
+                                </WrapPanel>
+                            </ListViewItem>
+                        </ListView>
+                    </Grid>
+                </Border>
             </StackPanel>
         </Grid>
     </Grid>

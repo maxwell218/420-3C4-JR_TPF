@@ -71,8 +71,23 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Classes\FriendRequest.cs" />
-    <Compile Include="Classes\User.cs" />
+    <Compile Include="Classes\Enums\Acces.cs" />
+    <Compile Include="Classes\Enums\Category.cs" />
+    <Compile Include="Classes\Enums\Status.cs" />
+    <Compile Include="Classes\Events\Event.cs" />
+    <Compile Include="Classes\Posts\Comment.cs" />
+    <Compile Include="Classes\Posts\Media\Blog.cs" />
+    <Compile Include="Classes\Posts\Media\Link.cs" />
+    <Compile Include="Classes\Posts\Media\Media.cs" />
+    <Compile Include="Classes\Posts\Media\Photo.cs" />
+    <Compile Include="Classes\Posts\Media\Position.cs" />
+    <Compile Include="Classes\Posts\Media\Video.cs" />
+    <Compile Include="Classes\Posts\Post.cs" />
+    <Compile Include="Classes\Posts\Share.cs" />
+    <Compile Include="Classes\Users\Group.cs" />
+    <Compile Include="Classes\Users\FriendRequest.cs" />
+    <Compile Include="Classes\Enums\Reaction.cs" />
+    <Compile Include="Classes\Users\User.cs" />
     <Compile Include="Windows\CreateUserWindow.xaml.cs">
       <DependentUpon>CreateUserWindow.xaml</DependentUpon>
     </Compile>
@@ -111,9 +126,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Assets\Images\" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Assets\Icons\addgroup_user_empty.png" />
     <Resource Include="Assets\Icons\addgroup_user_full.png" />
     <Resource Include="Assets\Icons\add_friend_empty.png" />
@@ -141,6 +153,28 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\Icons\options_full.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Posts\post1.jpg" />
+    <Resource Include="Assets\Posts\post10.jpg" />
+    <Resource Include="Assets\Posts\post11.jpg" />
+    <Resource Include="Assets\Posts\post12.jpg" />
+    <Resource Include="Assets\Posts\post2.jpg" />
+    <Resource Include="Assets\Posts\post3.jpg" />
+    <Resource Include="Assets\Posts\post4.jpg" />
+    <Resource Include="Assets\Posts\post5.jpg" />
+    <Resource Include="Assets\Posts\post6.jpg" />
+    <Resource Include="Assets\Posts\post7.jpg" />
+    <Resource Include="Assets\Posts\post8.jpg" />
+    <Resource Include="Assets\Posts\post9.jpg" />
+    <Resource Include="Assets\Users\user1.jpg" />
+    <Resource Include="Assets\Users\user2.jpg" />
+    <Resource Include="Assets\Users\user3.jpg" />
+    <Resource Include="Assets\Users\user4.jpg" />
+    <Resource Include="Assets\Users\user5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Users\default.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
