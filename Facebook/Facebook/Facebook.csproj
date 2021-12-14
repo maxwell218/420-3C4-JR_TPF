@@ -176,5 +176,11 @@
   <ItemGroup>
     <Resource Include="Assets\Users\default.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Icons\angry.png" />
+    <Resource Include="Assets\Icons\like.png" />
+    <Resource Include="Assets\Icons\love.png" />
+    <Resource Include="Assets\Icons\sad.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

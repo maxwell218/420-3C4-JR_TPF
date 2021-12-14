@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Facebook"
         mc:Ignorable="d"
-        Title="Facebook" Height="600" MinHeight="450" Width="1100" MinWidth="950" FontSize="14">
+        Title="Facebook" Height="900" MinHeight="450" Width="1100" MinWidth="950" FontSize="14">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="65"/>
@@ -108,7 +108,7 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="auto" SharedSizeGroup="LeftAndRight"/>
             </Grid.ColumnDefinitions>
-            <StackPanel Grid.Column="0" Margin="15, 15, 15, 0" VerticalAlignment="Top">
+            <StackPanel Grid.Column="0" Margin="15, 15, 0, 0" VerticalAlignment="Top">
                 <Border Background="White" BorderBrush="#E4EBEC" BorderThickness="1" CornerRadius="10">
                     <StackPanel Margin="15">
                         <TextBlock Padding="0, 0, 0, 5">Voir les publications de</TextBlock>
@@ -122,28 +122,65 @@
                     </StackPanel>
                 </Border>
             </StackPanel>
-            <ListView Style="{DynamicResource PostsStyle}" Grid.Column="1" Margin="0, 0, 0, 0">
+            <ListView x:Name="PostListView" Style="{DynamicResource PostsStyle}" Grid.Column="1">
                 <ListViewItem>
-                    <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15">
+                    <Grid Margin="0, 0, 0, 5">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                            <ColumnDefinition/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
                             <RowDefinition/>
                             <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
                         </Grid.RowDefinitions>
-                        <Border Width="40" Height="40" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" CornerRadius="25" Margin="0, 0, 5, 0">
+                        <Border Width="40" Height="40" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" CornerRadius="25" Margin="5, 5, 5, 5">
                             <Border.Background>
                                 <ImageBrush Stretch="Fill" ImageSource="/Assets/Users/user1.jpg" RenderOptions.BitmapScalingMode="HighQuality"/>
                             </Border.Background>
                         </Border>
-                        <TextBlock Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" Text="Elliot Hart" VerticalAlignment="Top"/>
-                        <TextBlock Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Text="7j" VerticalAlignment="Top" FontSize="12" Foreground="DarkGray"/>
+                        <TextBlock Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" Text="Elliot Hart" VerticalAlignment="Center" Margin="0, 5, 0, 0"/>
+                        <TextBlock Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Margin="0, 0, 0, 5" Text="7j" VerticalAlignment="Center" Foreground="DarkGray"/>
+                        <Image Grid.Row="2" Grid.ColumnSpan="2" Source="/Assets/Posts/post1.jpg" Stretch="Fill" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+                        <TextBlock Grid.Row="3" Grid.ColumnSpan="2" Margin="5, 5, 5, 0" FontSize="16" FontWeight="DemiBold">Titre du post</TextBlock>
+                        <TextBlock Grid.Row="4" Grid.ColumnSpan="2" Margin="5, 0, 5, 0" FontSize="12" Foreground="DarkGray">novembre 23 at 11:30</TextBlock>
+                        <TextBlock Grid.Row="5" Grid.ColumnSpan="2" Margin="5, 5, 5, 0" HorizontalAlignment="Left" FontSize="12" TextWrapping="WrapWithOverflow" TextAlignment="Justify">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id consectetur quam. Nam rutrum non dui et feugiat. Morbi a mattis leo. Phasellus efficitur nulla dignissim ipsum commodo, in maximus leo dignissim. Donec venenatis posuere justo quis pulvinar. Etiam eu neque nibh. Vivamus egestas sollicitudin dictum. Nunc tempus orci vel enim facilisis, sit amet rhoncus mi bibendum. Donec vel venenatis orci. Fusce ultricies libero id nulla dignissim, non molestie nunc placerat. Vestibulum hendrerit mi aliquet ante feugiat, a semper augue volutpat. Aenean leo est, sagittis non enim quis, aliquam vestibulum odio. Sed et suscipit orci.
+                        </TextBlock>
+                        <WrapPanel Grid.Row="6" Grid.ColumnSpan="2" Style="{DynamicResource PostReactionsStyle}">
+                            <ToggleButton IsChecked="True">
+                                <WrapPanel>
+                                    <Image Source="/Assets/Icons/like.png"/>
+                                    <TextBlock>0</TextBlock>
+                                </WrapPanel>
+                            </ToggleButton>
+                            <ToggleButton Margin="5, 0, 0, 0">
+                                <WrapPanel>
+                                    <Image Source="/Assets/Icons/love.png"/>
+                                    <TextBlock>0</TextBlock>
+                                </WrapPanel>
+                            </ToggleButton>
+                            <ToggleButton Margin="5, 0, 0, 0">
+                                <WrapPanel>
+                                    <Image Source="/Assets/Icons/sad.png"/>
+                                    <TextBlock>0</TextBlock>
+                                </WrapPanel>
+                            </ToggleButton>
+                            <ToggleButton Margin="5, 0, 0, 0">
+                                <WrapPanel>
+                                    <Image Source="/Assets/Icons/angry.png"/>
+                                    <TextBlock>0</TextBlock>
+                                </WrapPanel>
+                            </ToggleButton>
+                        </WrapPanel>
                     </Grid>
                 </ListViewItem>
             </ListView>
-            <StackPanel Grid.Column="2" Margin="15" VerticalAlignment="Top">
+            <StackPanel Grid.Column="2" Margin="0, 15, 15, 0" VerticalAlignment="Top">
                 <Border Background="White" BorderBrush="#E4EBEC" BorderThickness="1" CornerRadius="10">
                     <Grid Margin="15" MaxHeight="300">
                         <Grid.RowDefinitions>
