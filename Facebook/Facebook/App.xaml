@@ -6,7 +6,7 @@
     <Application.Resources>
         <!-- Nav color: #FFFFFF -->
         <!-- Background color: #F0F2F5 -->
-        <!-- Facebook color: #039BE5 -->
+        <!-- Facebook color: #039BE5, #036BF5 -->
 
         <!-- Login & logo -->
         <Style x:Key="LoginTextBlockLogoStyle" TargetType="{x:Type TextBlock}">
@@ -311,6 +311,106 @@
                                         </Setter.Value>
                                     </Setter>
                                 </Style>
+                                <Style TargetType="{x:Type TextBlock}">
+                                    <Style.Triggers>
+                                        <Trigger Property="Name" Value="Username">
+                                            <Setter Property="Grid.Row" Value="0"/>
+                                            <Setter Property="Grid.Column" Value="1"/>
+                                            <Setter Property="FontSize" Value="14"/>
+                                            <Setter Property="HorizontalAlignment" Value="Left"/>
+                                            <Setter Property="VerticalAlignment" Value="Center"/>
+                                            <Setter Property="Margin" Value="0, 5, 0, 0"/>
+                                        </Trigger>
+                                        <Trigger Property="Name" Value="TimeSpan">
+                                            <Setter Property="Grid.Row" Value="1"/>
+                                            <Setter Property="Grid.Column" Value="1"/>
+                                            <Setter Property="Foreground" Value="DarkGray"/>
+                                            <Setter Property="HorizontalAlignment" Value="Left"/>
+                                            <Setter Property="VerticalAlignment" Value="Center"/>
+                                            <Setter Property="Margin" Value="0, 0, 0, 5"/>
+                                        </Trigger>
+                                        <Trigger Property="Name" Value="Caption">
+                                            <Setter Property="Grid.Row" Value="3"/>
+                                            <Setter Property="Grid.ColumnSpan" Value="2"/>
+                                            <Setter Property="FontSize" Value="16"/>
+                                            <Setter Property="FontWeight" Value="DemiBold"/>
+                                            <Setter Property="Margin" Value="5, 5, 5, 0"/>
+                                        </Trigger>
+                                        <Trigger Property="Name" Value="Date">
+                                            <Setter Property="Grid.Row" Value="4"/>
+                                            <Setter Property="Grid.ColumnSpan" Value="2"/>
+                                            <Setter Property="FontSize" Value="12"/>
+                                            <Setter Property="Foreground" Value="DarkGray"/>
+                                            <Setter Property="Margin" Value="5, 0, 5, 0"/>
+                                        </Trigger>
+                                        <Trigger Property="Name" Value="Text">
+                                            <Setter Property="Grid.Row" Value="5"/>
+                                            <Setter Property="Grid.ColumnSpan" Value="2"/>
+                                            <Setter Property="FontSize" Value="12"/>
+                                            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                                            <Setter Property="TextWrapping" Value="Wrap"/>
+                                            <Setter Property="TextAlignment" Value="Justify"/>
+                                            <Setter Property="Margin" Value="5, 5, 5, 5"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                                <Style TargetType="{x:Type Image}">
+                                    <Setter Property="Grid.Row" Value="2"/>
+                                    <Setter Property="Grid.ColumnSpan" Value="2"/>
+                                    <Setter Property="Stretch" Value="Fill"/>
+                                    <Setter Property="RenderOptions.BitmapScalingMode" Value="NearestNeighbor"/>
+                                </Style>
+                                <Style TargetType="WrapPanel">
+                                    <Setter Property="Grid.Row" Value="6"/>
+                                    <Setter Property="Grid.ColumnSpan" Value="2"/>
+                                    <Setter Property="Margin" Value="5, 5, 5, 0"/>
+                                    <Style.Resources>
+                                        <Style TargetType="{x:Type ToggleButton}">
+                                            <Setter Property="SnapsToDevicePixels" Value="True"/>
+                                            <Setter Property="Background" Value="Transparent"/>
+                                            <Setter Property="Margin" Value="0, 0, 5, 0"/>
+                                            <Setter Property="Template">
+                                                <Setter.Value>
+                                                    <ControlTemplate TargetType="{x:Type ToggleButton}">
+                                                        <Border x:Name="border" CornerRadius="10" BorderBrush="DarkGray" BorderThickness="1" Background="{TemplateBinding Background}">
+                                                            <ContentPresenter/>
+                                                        </Border>
+                                                        <ControlTemplate.Triggers>
+                                                            <Trigger Property="IsMouseOver" Value="True">
+                                                                <Setter Property="BorderBrush" TargetName="border" Value="#036BF5"/>
+                                                            </Trigger>
+                                                            <Trigger Property="IsChecked" Value="True">
+                                                                <Setter Property="BorderBrush" TargetName="border" Value="#039BE5"/>
+                                                                <Setter Property="Background" Value="#cceeff"/>
+                                                                <Setter Property="Foreground" Value="#039BE5"/>
+                                                            </Trigger>
+                                                            <Trigger Property="IsChecked" Value="False">
+                                                                <Setter Property="Background" Value="Transparent"/>
+                                                            </Trigger>
+                                                        </ControlTemplate.Triggers>
+                                                    </ControlTemplate>
+                                                </Setter.Value>
+                                            </Setter>
+                                            <Style.Resources>
+                                                <Style TargetType="{x:Type WrapPanel}">
+                                                    <Setter Property="Margin" Value="2"/>
+                                                    <Style.Resources>
+                                                        <Style TargetType="{x:Type Image}">
+                                                            <Setter Property="Width" Value="20"/>
+                                                            <Setter Property="Height" Value="20"/>
+                                                            <Setter Property="RenderOptions.BitmapScalingMode" Value="HighQuality"/>
+                                                        </Style>
+                                                        <Style TargetType="{x:Type TextBlock}">
+                                                            <Setter Property="VerticalAlignment" Value="Center"/>
+                                                            <Setter Property="Margin" Value="5, 0, 0, 0"/>
+                                                            <Setter Property="FontSize" Value="12"/>
+                                                        </Style>
+                                                    </Style.Resources>
+                                                </Style>
+                                            </Style.Resources>
+                                        </Style>
+                                    </Style.Resources>
+                                </Style>
                             </Style.Resources>
                         </Style>
                     </Style.Resources>
@@ -392,39 +492,6 @@
                                 </Style>
                                 <Style TargetType="{x:Type TextBlock}">
                                     <Setter Property="VerticalAlignment" Value="Center"/>
-                                </Style>
-                            </Style.Resources>
-                        </Style>
-                    </Style.Resources>
-                </Style>
-            </Style.Resources>
-        </Style>
-        <Style x:Key="PostReactionsStyle" TargetType="{x:Type WrapPanel}">
-            <Setter Property="Margin" Value="5, 5, 5, 0"/>
-            <Style.Resources>
-                <Style TargetType="{x:Type ToggleButton}">
-                    <Setter Property="Template">
-                        <Setter.Value>
-                            <ControlTemplate TargetType="{x:Type ToggleButton}">
-                                <Border CornerRadius="10" BorderBrush="LightGray" BorderThickness="1" Background="Transparent" SnapsToDevicePixels="True">
-                                    <ContentPresenter/>
-                                </Border>
-                            </ControlTemplate>
-                        </Setter.Value>
-                    </Setter>
-                    <Style.Resources>
-                        <Style TargetType="{x:Type WrapPanel}">
-                            <Setter Property="Margin" Value="2"/>
-                            <Style.Resources>
-                                <Style TargetType="{x:Type Image}">
-                                    <Setter Property="Width" Value="20"/>
-                                    <Setter Property="Height" Value="20"/>
-                                    <Setter Property="RenderOptions.BitmapScalingMode" Value="HighQuality"/>
-                                </Style>
-                                <Style TargetType="{x:Type TextBlock}">
-                                    <Setter Property="VerticalAlignment" Value="Center"/>
-                                    <Setter Property="Margin" Value="5, 0, 0, 0"/>
-                                    <Setter Property="FontSize" Value="12"/>
                                 </Style>
                             </Style.Resources>
                         </Style>

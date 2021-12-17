@@ -55,7 +55,7 @@ namespace Facebook
 			StringBuilder message = new StringBuilder(user.ToString() + " is ");
 			string messageStatus = (status == Status.StatusValues.Going) ? "going to" : "interested in";
 			message.Append(messageStatus + " this event.");
-			Post post = new Post(user, Title, text: message.ToString(), Image, Acces.AccesValues.Friends_Only, Date);
+			Post post = new Post() { Poster = user, Caption = Title, Text = message.ToString(), MediaContent = new List<Photo> { Image }, Visibility = Acces.AccesValues.Friends_Only, Date = Date };
 			return post;
 		}
 

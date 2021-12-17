@@ -55,6 +55,13 @@ namespace Facebook
 				}
 			}
 
+			// Initialize Wall
+			foreach (Post post in App.Current.Posts)
+			{
+				Console.WriteLine(post.Caption);
+				PostListView.Items.Add(post.CreatePostXAML());
+			}
+
 		}
 	}
 }
