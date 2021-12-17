@@ -18,3 +18,24 @@ D:\Informatique\Session 3\Programmation d'interfaces graphiques\TPF\Facebook\Fac
 D:\Informatique\Session 3\Programmation d'interfaces graphiques\TPF\Facebook\Facebook\obj\Debug\Windows\CreateUserWindow.baml
 D:\Informatique\Session 3\Programmation d'interfaces graphiques\TPF\Facebook\Facebook\obj\Debug\Windows\MainWindow.g.cs
 D:\Informatique\Session 3\Programmation d'interfaces graphiques\TPF\Facebook\Facebook\obj\Debug\Windows\MainWindow.baml
+C:\Users\bouch\Git Repositories\420-3C4-JR_TPF\Facebook\Facebook\bin\Debug\Facebook.exe.config
+C:\Users\bouch\Git Repositories\420-3C4-JR_TPF\Facebook\Facebook\bin\Debug\Facebook.exe
+C:\Users\bouch\Git Repositories\420-3C4-JR_TPF\Facebook\Facebook\bin\Debug\Facebook.pdb
+C:\Users\bouch\Git Repositories\420-3C4-JR_TPF\Facebook\Facebook\obj\Debug\Facebook.csproj.AssemblyReference.cache
+C:\Users\bouch\Git Repositories\420-3C4-JR_TPF\Facebook\Facebook\obj\Debug\Facebook.csproj.SuggestedBindingRedirects.cache
+C:\Users\bouch\Git Repositories\420-3C4-JR_TPF\Facebook\Facebook\obj\Debug\Windows\CreateUserWindow.g.cs
+C:\Users\bouch\Git Repositories\420-3C4-JR_TPF\Facebook\Facebook\obj\Debug\Windows\LoginWindow.g.cs
+C:\Users\bouch\Git Repositories\420-3C4-JR_TPF\Facebook\Facebook\obj\Debug\Windows\MainWindow.g.cs
+C:\Users\bouch\Git Repositories\420-3C4-JR_TPF\Facebook\Facebook\obj\Debug\App.g.cs
+C:\Users\bouch\Git Repositories\420-3C4-JR_TPF\Facebook\Facebook\obj\Debug\Facebook_MarkupCompile.cache
+C:\Users\bouch\Git Repositories\420-3C4-JR_TPF\Facebook\Facebook\obj\Debug\Facebook_MarkupCompile.lref
+C:\Users\bouch\Git Repositories\420-3C4-JR_TPF\Facebook\Facebook\obj\Debug\App.baml
+C:\Users\bouch\Git Repositories\420-3C4-JR_TPF\Facebook\Facebook\obj\Debug\Windows\CreateUserWindow.baml
+C:\Users\bouch\Git Repositories\420-3C4-JR_TPF\Facebook\Facebook\obj\Debug\Windows\LoginWindow.baml
+C:\Users\bouch\Git Repositories\420-3C4-JR_TPF\Facebook\Facebook\obj\Debug\Windows\MainWindow.baml
+C:\Users\bouch\Git Repositories\420-3C4-JR_TPF\Facebook\Facebook\obj\Debug\Facebook.g.resources
+C:\Users\bouch\Git Repositories\420-3C4-JR_TPF\Facebook\Facebook\obj\Debug\Facebook.Properties.Resources.resources
+C:\Users\bouch\Git Repositories\420-3C4-JR_TPF\Facebook\Facebook\obj\Debug\Facebook.csproj.GenerateResource.cache
+C:\Users\bouch\Git Repositories\420-3C4-JR_TPF\Facebook\Facebook\obj\Debug\Facebook.csproj.CoreCompileInputs.cache
+C:\Users\bouch\Git Repositories\420-3C4-JR_TPF\Facebook\Facebook\obj\Debug\Facebook.exe
+C:\Users\bouch\Git Repositories\420-3C4-JR_TPF\Facebook\Facebook\obj\Debug\Facebook.pdb
